@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Avatar, Navbar } from 'flowbite-react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { signOut } from '../redux/user/userSlice'
+import { signoutSuccess } from '../redux/user/userSlice'
 import { Menu, X, User, LogOut } from 'lucide-react'
 
 export default function NavbarComponent() {
@@ -14,7 +14,7 @@ export default function NavbarComponent() {
     const handleSignOut = async () => {
         try {
             await fetch('/api/auth/signout', { credentials: 'include' })
-            dispatch(signOut())
+            dispatch(signoutSuccess())
             navigate('/')
         } catch (error) {
             console.error('Error signing out:', error)

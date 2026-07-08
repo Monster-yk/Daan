@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { signOut } from '../redux/user/userSlice';
+import { signoutSuccess } from '../redux/user/userSlice';
 import { 
   User, 
   Mail, 
@@ -71,7 +71,7 @@ const Profile = () => {
   const handleSignOut = async () => {
     try {
       await fetch('/api/auth/signout', { credentials: 'include' });
-      dispatch(signOut());
+      dispatch(signoutSuccess());
       navigate('/');
     } catch (error) {
       console.error('Error signing out:', error);
