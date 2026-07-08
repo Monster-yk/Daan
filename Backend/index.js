@@ -29,6 +29,9 @@ app.listen(3000, () => {
     console.log('Server running on port 3000');
 });
 
+// Health check endpoint for Render
+app.get('/healthz', (req, res) => res.status(200).send('OK'));
+
 app.use('/api/auth', authRoute);
 app.use('/api/donate', donationRoute);
 app.use('/api/volunteer', volunteerRoute);
