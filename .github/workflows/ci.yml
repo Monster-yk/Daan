@@ -1,0 +1,44 @@
+name: Daan CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-and-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js 18.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+        cache-dependency-path: |
+          Frontend/package-lock.json
+          Backend/package-lock.json
+
+    - name: Install Frontend Dependencies
+      working-directory: ./Frontend
+      run: npm ci
+
+    - name: Lint Frontend
+      working-directory: ./Frontend
+      run: npm run lint
+
+    - name: Build Frontend
+      working-directory: ./Frontend
+      run: npm run build
+
+    - name: Install Backend Dependencies
+      working-directory: ./Backend
+      run: npm ci
+
+    # When you add backend tests, you can uncomment this step
+    # - name: Test Backend
+    #   working-directory: ./Backend
+    #   run: npm test
