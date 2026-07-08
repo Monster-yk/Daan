@@ -1,4 +1,3 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import bgimage from '../image/drive-download-20241217T033358Z-001/larm-rmah-AEaTUnvneik-unsplash.jpg'
 import childimage from '../image/drive-download-20241217T033358Z-001/Blue_White_Professional_Concept_Foundation_Logo__2_-removebg-preview.png'
@@ -210,7 +209,7 @@ export default function Home() {
                 <div className="relative z-10 p-8 text-white">
                   <h3 className="text-2xl font-bold mb-4">DONATION</h3>
                   <p className="mb-6 text-white/90">
-                    Every contribution, no matter how small, makes a significant impact in someone's life. Your generosity creates ripples of positive change.
+                    Every contribution, no matter how small, makes a significant impact in someone&apos;s life. Your generosity creates ripples of positive change.
                   </p>
                   <button className="border border-white px-6 py-2 rounded-full hover:bg-white hover:text-[#2A9D8F] transition-colors flex items-center space-x-2">
                     <Heart className="w-4 h-4" />

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { signOut } from '../redux/user/userSlice';
 import { 
   User, 
   Mail, 
-  Lock, 
   Calendar, 
   MapPin, 
   Users, 
@@ -15,7 +14,6 @@ import {
   CheckCircle,
   XCircle,
   Clock,
-  Settings,
   LogOut
 } from 'lucide-react';
 
@@ -63,6 +61,7 @@ const Profile = () => {
         setVolunteering(volunteeringData);
       }
     } catch (err) {
+      console.error(err);
       setError('Failed to fetch user data');
     } finally {
       setLoading(false);

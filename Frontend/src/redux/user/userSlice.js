@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { FaSleigh } from 'react-icons/fa';
 
 const initialState = {
     currentUser: null,

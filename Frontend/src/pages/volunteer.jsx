@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Calendar, MapPin, Users, Clock, CheckCircle } from 'lucide-react';
@@ -96,7 +96,7 @@ export default function Volunteer() {
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">Join Our Volunteer Team</h1>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Make a difference in someone's life. Your time and skills can create lasting impact in our community.
+            Make a difference in someone&apos;s life. Your time and skills can create lasting impact in our community.
           </p>
           <div className="flex justify-center space-x-8">
             <div className="flex items-center space-x-2">
@@ -123,7 +123,7 @@ export default function Volunteer() {
             
             {success && (
               <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-                Application submitted successfully! We'll get back to you soon.
+                Application submitted successfully! We&apos;ll get back to you soon.
               </div>
             )}
 
@@ -269,7 +269,7 @@ export default function Volunteer() {
                 <Users className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold mb-3">Community Impact</h3>
-              <p className="text-gray-600">Make a real difference in people's lives and contribute to building stronger communities.</p>
+              <p className="text-gray-600">Make a real difference in people&apos;s lives and contribute to building stronger communities.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">

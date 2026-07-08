@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
-import {  Button, Label, TextInput,Spinner,Alert } from 'flowbite-react';
+import { useState } from 'react'
+import {  Button, Label, TextInput } from 'flowbite-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { signInFailure, signInStart, signInSuccess } from '../redux/user/userSlice';
-import {  useDispatch, useSelector } from 'react-redux';
+import {  useDispatch } from 'react-redux';
 
 
-export default function signin() {
+export default function Signin() {
   const [formData, setFormData] = useState({});
-  const { loading, error: errorMessage } = useSelector(state => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -67,7 +66,7 @@ export default function signin() {
                     </Button>
                   </form>  
                   <div>
-                      <span>Don't have account?</span>
+                      <span>Don&apos;t have account?</span>
                       <Link to='/signup' className='text-blue-600'>signup</Link>
                   </div>
                 </div>

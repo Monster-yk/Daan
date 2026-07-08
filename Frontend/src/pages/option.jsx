@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Utensils, ShoppingBag, HandCoins, Laptop, PenTool, Gift } from 'lucide-react'
 ; // Replace with actual icon imports

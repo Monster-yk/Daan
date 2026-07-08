@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Utensils } from 'lucide-react';
 import { Link,useNavigate } from 'react-router-dom';
-import {useDispatch,useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {signInFailure,signInStart,signInSuccess} from '../redux/user/userSlice';
 
 export default function FoodDonationPage() {
